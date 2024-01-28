@@ -10,7 +10,7 @@ def signup(request):
         user = User(name=name, email=email, password=password)
         user.password = make_password(user.password)
         user.save()
-        return redirect('login')  # Fix the redirect function here
+        return redirect('homepage')  # Fix the redirect function here
     else:
         return render(request, 'signup.html')
 
